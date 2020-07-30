@@ -19,8 +19,11 @@ export default {
     },
     getTime() {
       this.$api.serverless.getTime()
-          .then(() => {
-
+          .then((res) => {
+            this.time = res.data.payload;
+          })
+          .catch((error) => {
+            console.log('smt went wrong', error)
           })
     }
   }

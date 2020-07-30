@@ -1,0 +1,16 @@
+org: slaweo
+app: time-app
+component: express
+name: express-starter
+
+functions:
+  getTime:
+    handler: handler.getTime
+    events:
+      - http: GET get-time
+
+plugins:
+  - serverless-ooffline
+
+inputs:
+  src: ./
